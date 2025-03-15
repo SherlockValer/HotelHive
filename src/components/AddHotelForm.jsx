@@ -116,6 +116,7 @@ const AddHotelForm = () => {
 
                 <label htmlFor="priceRange">Price Range</label> <br/>
                 <select onChange={handleChange} name="priceRange">
+                    <option value="">-- Select --</option>
                     <option value="$$(11-30)">$$(11-30)</option>
                     <option value="$$$(31-60)">$$$(31-60)</option>
                     <option value="$$$$(61+)">$$$$(61+)</option>
