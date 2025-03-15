@@ -59,7 +59,7 @@ const AddHotelForm = () => {
     const formHandler = async (e) => {
         e.preventDefault()
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API_URL}/hotels`, {
                 method : "POST",
                 headers: {"Content-type" : "application/json"},
                 body: JSON.stringify(formData)
