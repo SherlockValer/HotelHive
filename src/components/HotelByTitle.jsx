@@ -3,7 +3,7 @@ import useFetch from "./useFetch"
 const API_URL = import.meta.env.VITE_API_URL
 
 const HotelByTitle = ({title}) => {
-    const {data, loading, error} = useFetch(`${API_URL}/${title}`)
+    const {data, loading, error} = useFetch(`${API_URL}/hotels/${title}`)
 
     return (
         <>

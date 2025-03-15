@@ -4,13 +4,13 @@ import useFetch from "./useFetch"
 const API_URL = import.meta.env.VITE_API_URL
 
 const AllHotels = () => {
-    const {data, loading, error} = useFetch(API_URL)
+    const {data, loading, error} = useFetch(`${API_URL}/hotels`)
 
     const [successMsg, setMsg] = useState("")
 
     const deleteHotel = async (hotelId) => {
         try {
-            const response = await fetch(`${API_URL}/${hotelId}`, {
+            const response = await fetch(`${API_URL}/hotels/${hotelId}`, {
                 method: "DELETE",
             })
 
